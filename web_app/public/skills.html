@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Skills</title>
+      <link rel="stylesheet" href="styles.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name="description" content="Home Page For Me">
+      <meta name="theme-color" content="#950740">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+  <body>
+    <header>
+      <h1>Matt Bradley</h1>
+    </header>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="index.html"><span class="navText">Home</span></a></li>
+        <li><a href="skills.html"><span class="navText">Skills</span></a></li>
+        <li><a href="qualifications.html"><span class="navText">Qualifications</span></a></li>
+      </ul>
+    </nav>
+
+
+    <main id=home>
+      <div class=aniBar></div>
+      <h1><mark>Skills</mark></h1>
+      <div class=aniBar></div>
+        <section class=info>
+            <h2><mark>What is CSS and JS?</mark></h2>
+            <article class="css">
+                <h3>Css</h3>
+                <p>Cascading Style Sheets or CSS is a way to style HTML in a convenient way while being able to maintain a simple page structure. As seen from Design 1 and Design 2 on the page, a website with exactly the same layout can be shown in a vastly different way with different features and animations possible. This can be handled via a single file for a whole web stucture using class and id selectors as well as selecting whole tags and sub structures within a website.</p>
+            </article>
+            <article class="js">
+                <h3>JS</h3>
+                <p>Javascript or ECMAscript is a scripting language that is mainly used on the backend of websites to take in and manipulate data that could be shown on the screen. In the case of the coffee applications, javascript can be used to get the data from forms on the web page, apply processing onto that data and output back onto the website for a fluent and easy to manage system.</p>
+            </article>
+        </section>
+        <section class=designs>
+            <h2><mark>Designs</mark></h2>
+            <article class="design1 design">
+                <h3>Design 1</h3>
+                <img src="images/design1_screenshot.png" alt="Design 1 Website Screenshot" class="screenshot">
+                <p>This design incorperates a side navigation bar on the left that is fixed in position and can be expanded when hovered. This allows the easiest browsing of content of the page while also giving easy access to the set of navigation links. The main page follows a grid flexbox design showing how text can wrap in rows together and span across multiple columns dynamically. The header animation easing in with the font size displays the title in a dynamic way and is instantly visible on the page load.</p>
+                <a href="design1.html"><span>Design 1</span></a>
+            </article>
+            <article class="design2 design">
+                <h3>Design 2</h3>
+                <img src="images/design2_screenshot.png" alt="Design 2 Website Screenshot" class="screenshot">
+                <p>Design 2 instead opts for a top sticky navigation bar showing text only until hovered to display the relevant svg icons. The block design of this page allows a much easier linear experience to follow while the images disable wrap to give a form of structure in each block. The backgrounds to main block images expand when hovered. The main background colour of the page utilises a gradient rather than a fixed colour with the background colour of blocks also having lower opacity to reflect this. The movement of the central image shows how images can be translated across the page and moved dynamically.</p>
+                <a href="design2.html"><span>Design 2</span></a>
+            </article>
+            <article class="jsDesign design">
+              <h3>ECMAscript</h3>
+              <img src="images/coffee_screenshot.png" alt="Javascript Website Screenshot" class="screenshot">
+              <p>This shows a coffee ordering system that used multiple types of inputs, radio, dropdown and sliders to gather data and clear use of labels to show currently what is happening. This all works due to the backend javascript dynamically changing text based on when inputs change and being able to clear this through use of the buttons.</p>
+              <a href="coffee.html"><span>ECMAscript</span></a>
+            </article>
+        </section>
+    <script>
+      //check whether browser support service workers
+      if ('serviceWorker' in navigator) {
+          //wait until page loaded to avoid delaying rendering
+          window.addEventListener('load', function() {
+              //register service worker
+              navigator.serviceWorker.register('serviceworker.js').then(
+                  function(registration) {
+                      console.log('Service worker registration successful', 
+                                  registration);
+                  }, 
+                  function(err) {
+                      console.log('Service worker registration failed', err);
+              });
+          });
+      }
+    </script>
+    </main>
+
+
+    <footer>
+      <p>Matt Bradley</p>
+      <a href="mailto:b014272j@student.staffs.ac.uk">Send An Email</a><br>
+      <a href="tel:07777777777">Make A Call</a>
+    </footer>
+  </body>
+</html>
+

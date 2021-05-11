@@ -1,0 +1,170 @@
+@font-face {
+    /* Add some other fonts */
+    font-family: 'Roboto';
+    src: url('fonts//Roboto-Regular.woff2') format('woff2'), 
+				url('fonts/Roboto-Regular.woff') format('woff'),
+				url('fonts/Roboto-Regular.ttf') format('truetype'),
+				url('fonts/Roboto-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}  
+
+:root {
+    font-size: 12px;
+    font-family: 'Roboto';
+    --green:#6ed3cf;
+    --purple:#9068be;
+    --grey:#e1e8f0;
+    --red:#e62739;
+    --purple-low-opacity: rgba(144, 104, 190, 0.5);
+}
+
+
+.navImg {
+    width: 5rem;
+    height:auto;
+    padding-top: 1rem;
+}
+
+.mainImg {
+    /* Add responsiveness to img */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 1rem;
+    animation: moveImage 3s linear 5;
+    width: 50%;
+
+}
+
+.mainNav {
+    top: 0;
+    overflow: hidden;
+    height: 4rem;
+    transition: height 300ms ease-in-out;
+    background-color: var(--purple);
+    border: 0.3rem indigo solid;
+    position: sticky;
+    z-index: 1;
+}
+
+
+.mainNav:hover {
+    height:10rem;
+}
+
+.mainNav ul {
+    display: flex;
+}
+
+.mainNav li {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    display: block;
+    flex-grow: 1;
+    margin-top: 1rem;
+}
+
+a {
+    color: black;
+}
+
+.mainNav span {
+    text-align: center;
+    display: block;
+}
+body {
+    background: linear-gradient(141deg, var(--green) 0%, var(--red) 100%);
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+.image {
+    /* Add media Queries to float at higher screen sizes  */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 180px;
+    max-width: 300px;
+    width: 60%;
+    padding: 1rem;
+    transition: padding 500ms ease-in-out;
+    background-color: indigo;
+}
+
+.image:hover {
+    padding-right: 15%;
+    padding-left: 15%;
+}
+
+div {
+    height:auto;
+    background-color: var(--purple-low-opacity);
+    border: 0.5rem var(--purple) solid;
+}
+
+header, footer {
+    background-color: var(--purple);
+    color: black;
+    text-align: center;
+}
+
+footer {
+    line-height: 2.5rem;
+}
+
+main {
+    display:block;
+    grid-template-columns: auto auto;
+    padding:1rem; 
+}
+
+.boxThree {
+    align-items: center;
+}
+    
+
+@media screen and (min-width:500px) {
+    :root {
+      font-size: 16px;
+    }
+
+    div {
+        margin: 2rem;
+    }
+  }
+  
+  @media screen and (min-width:800px) {
+    :root {
+      font-size: 20px;
+    }
+
+
+  }
+
+@keyframes moveImage {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-35%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(35%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

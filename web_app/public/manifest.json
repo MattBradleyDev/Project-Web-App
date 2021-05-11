@@ -1,0 +1,7 @@
+{
+    "name": "Matt Bradley Web Assignment",
+    "short_name": "MB Web",
+    "start_url": "https://m-bradley-project.web.app/index.html",
+    "display": "standalone",
+    "description": "My First PWA"
+  }

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Qualifications</title>
+      <link rel="stylesheet" href="styles.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name="description" content="Home Page For Me">
+      <meta name="theme-color" content="#950740">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+  <body>
+    <header>
+        <h1>Matt Bradley</h1>
+    </header>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="index.html"><span class="navText">Home</span></a></li>
+        <li><a href="skills.html"><span class="navText">Skills</span></a></li>
+        <li><a href="qualifications.html"><span class="navText">Qualifications</span></a></li>
+      </ul>
+    </nav>
+
+
+    <main id=qualifications>
+        <div class=aniBar></div>
+        <h1><mark>Academic Achievements</mark></h1>
+        <div class=aniBar></div>
+
+        <table id=qualTable>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Grade</th>
+                    <th>Education Level</th>
+                    <th>Place Accuired</th>
+                </tr>
+            </thead>
+            <tbody>            
+                <tr>
+                    <td>Computer Science</td>
+                    <td>A</td>
+                    <td>A Level</td>
+                    <td rowspan=3>King Edward VI College</td>
+                </tr>
+                <tr>
+                    <td>Statistics</td>
+                    <td>B</td>
+                    <td>A Level</td>
+                </tr>
+                <tr>
+                    <td>Classical Civilisations</td>
+                    <td>B</td>
+                    <td>A Level</td>
+                </tr>
+                <tr>
+                    <td>Maths</td>
+                    <td>A*</td>
+                    <td>GCSE</td>
+                    <td rowspan=10>The Wordsley School</td>
+                </tr>
+                <tr>
+                    <td>Business</td>
+                    <td>A*</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>Computing</td>
+                    <td>A</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>A</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td>A</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>Religious Studies</td>
+                    <td>A</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>Chemistry</td>
+                    <td>B</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>Biology</td>
+                    <td>B</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>English literature</td>
+                    <td>B</td>
+                    <td>GCSE</td>
+                </tr>
+                <tr>
+                    <td>English Language</td>
+                    <td>C</td>
+                    <td>GCSE</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                    <tr>
+                        <th colspan="4" >Total Qualifications - 13</th>
+                    </tr>
+            </tfoot>
+
+
+        </table>
+        <script>
+            //check whether browser support service workers
+            if ('serviceWorker' in navigator) {
+                //wait until page loaded to avoid delaying rendering
+                window.addEventListener('load', function() {
+                    //register service worker
+                    navigator.serviceWorker.register('serviceworker.js').then(
+                        function(registration) {
+                            console.log('Service worker registration successful', 
+                                        registration);
+                        }, 
+                        function(err) {
+                            console.log('Service worker registration failed', err);
+                    });
+                });
+            }
+          </script>
+    </main>
+
+
+    <footer>
+      <p>Matt Bradley</p>
+      <a href="mailto:b014272j@student.staffs.ac.uk">Send An Email</a><br>
+      <a href="tel:07777777777">Make A Call</a>
+    </footer>
+  </body>
+</html>
+

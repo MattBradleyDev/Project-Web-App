@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Main Page</title>
+      <link rel="stylesheet" href="styles.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name="description" content="Home Page For Me">
+      <meta name="theme-color" content="#950740">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+  <body>
+    <header>
+      <h1>Matt Bradley</h1>
+    </header>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="index.html"><span class="navText">Home</span></a></li>
+        <li><a href="skills.html"><span class="navText">Skills</span></a></li>
+        <li><a href="qualifications.html"><span class="navText">Qualifications</span></a></li>
+      </ul>
+    </nav>
+
+
+    <main id=home>
+      <div class=aniBar></div>
+      <h1><mark>About Me</mark></h1>
+      <div class=aniBar></div>
+      <a href="https://www.exponential-e.com/images/easyblog_articles/221/Ransomware-banner.png">
+      <picture>
+        <source media="(min-width:800px)" srcset="images/mainImgBanner-large.webp" type="image/webp">
+        <source media="(min-width:400px)" srcset="images/mainImgBanner.webp" type="image/webp">
+        <source media="(min-width:1px)" srcset="images/mainImgBanner-small.webp" type="image/webp">
+        <source media="(min-width:800px)" srcset="images/mainImgBanner-large.jpg">
+        <source media="(min-width:400px)" srcset="images/mainImgBanner.jpg">
+        <source media="(min-width:1px)" srcset="images/mainImgBanner-small.jpg">
+        <img src="images/mainImgBanner.png" id=mainBanner alt="Code Skull Banner">
+      </picture>
+    </a>
+      <article id=blockOne>
+        <h2><mark>Get To Know Me</mark></h2>
+        <a href="https://n86-64.github.io/assets/img/blog/Snake.jpg">
+        <img src="images/snakeImg.jpg" alt="snake game" class="SectionImg">
+        </a>
+        <p>I'm Matt, a first year Computer Science Student as Staffordshire University persuing a career in software development. The journey to this began back in 2013 when naively trying to make a game - as most do. From that point I traversed the field of 'Hello world!' to Hangman until I had a live game of snake created from my keyboard. Nowadys programming ideas like Machine learning peak my interests as well as commercial software development.</p>
+        <p>I'm very passionate about the work that i'm doing, hoping to soon grasp my chance to get out in the industry and take a hands on approach to commercial software development. For my studies in the meantime the programming aspect is where i'm most at home, especially looking forward to such topics such as mobile app development- a new path I havent yet gone down.</p>
+        <p>My journey in programming always felt like adding new pieces to a puzzle with each method I learned. The biggest of which being object oriented programming - it made everything fit together perfectly.</p>
+        <p>I am proficient in the following languages:</p>
+          <ul>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Javascript</li>
+          </ul>
+        <p>Although I can learn new syntax quickly given my understanding of the fundemental workings of code and design processes.</p>
+          
+        
+      </article>
+      <article id=blockTwo>
+        <h2><mark>University Year One</mark></h2>
+        <a href="https://pbs.twimg.com/profile_images/1149293573017407488/--0BQG8B_400x400.png">
+        <img src="images/staffsImage.png" alt="Staffordshire University Logo" class="SectionImg">
+        </a>
+        <p>My current University experience has been a good one, experiencing new topics that i'd never delved into before, such as web development and networking. Being able to learn at an accelerated pace compared to previous education is rewarding in the rapid development of new skills that were both accessible and fun to progress through</p>
+        <p>The skills I had already had from previous education, mainly being python programming and computer science fundamentals, have also been honed toward the best practices and methods for a clean process.</p>
+        <p>The four modules I current study are:</p>
+        <ol>
+          <li>Web Development and Operating Systems</li>
+          <li>Digital Technologies</li>
+          <li>Software Development and Application Modeling</li>
+          <li>Networking and Cyber Security</li>
+        </ol>
+      </article>
+      <article id=blockThree>
+        <h2><mark>Hobbies</mark></h2>
+        <a href="https://vignette.wikia.nocookie.net/kerokerobonito/images/1/15/Time_n_place_cover.jpg">
+        <img src="images/albumImg-big.jpg" alt="time 'n' place album" class="SectionImg">
+        </a>
+        <p>In my spare time I enjoy engaging with activities tied to my course, such as programming projects to challange myself, but also things to distance away to give a break, such as having a big interest in music and nature.</p>
+        <h3>Programming</h3>
+        <p>Small programming projects have always been something to keep myself entertained - more often than not starting another before completion. Most of these are completed in python with an emphasis on pygame in things like Defender-style 80s arcade shooters pushing my limits in technical features like AI and waveform manipulation to learn in a fun context.</p>
+        <h3>Music</h3>
+        <p>Regardless of the activity or time - music has been a big part of my life. Whether this be to work with, to relax to or actively enjoy music plays a key role.</p>
+        <p>My favourite current genres are as follows:</p>
+          <ol>
+            <li>Electropop</li>
+            <li>Indie rock</li>
+            <li>Lofi</li>
+            <li>Jazz</li>
+          </ol>
+      </article>
+      <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function(registration) {
+                        console.log('Service worker registration successful', 
+                                    registration);
+                    }, 
+                    function(err) {
+                        console.log('Service worker registration failed', err);
+                });
+            });
+        }
+      </script>
+    </main>
+    <footer>
+      <p>Matt Bradley</p>
+      <a href="mailto:b014272j@student.staffs.ac.uk">Send An Email</a><br>
+      <a href="tel:07777777777">Make A Call</a>
+    </footer>
+  </body>
+</html>
+

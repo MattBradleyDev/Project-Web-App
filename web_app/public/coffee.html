@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Coffee</title>
+      <link rel="stylesheet" href="styles.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name="description" content="Home Page For Me">
+      <meta name="theme-color" content="#950740">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+  <body>
+    <header>
+      <h1>Coffee Ordering</h1>
+    </header>
+    <nav class="mainNav">
+      <ul>
+        <li><a href="index.html"><span class="navText">Home</span></a></li>
+        <li><a href="skills.html"><span class="navText">Skills</span></a></li>
+        <li><a href="qualifications.html"><span class="navText">Qualifications</span></a></li>
+      </ul>
+    </nav>
+
+
+    <main id=home>
+        <form id=typeForm>
+            <fieldset id=drinkType>
+              <legend>Type</legend>
+                <h2><mark>Choose A Drink</mark></h2>
+                <input type="radio" id="latte" class="bigRadio" name="type" value="latte" onclick="hideMilkTab(false)" required>
+                <label for="latte">Latte</label><br>
+
+                <input type="radio" id="cappuccino" class="bigRadio" name="type" value="cappuccino" onclick="hideMilkTab(false)" required>
+                <label for="cappuccino">cappuccino</label><br>
+
+                <input type="radio" id="flat_white" class="bigRadio" name="type" value="flat white" onclick="hideMilkTab(false)" required>
+                <label for="flat_white">flat white</label><br>
+
+                <input type="radio" id="espresso" class="bigRadio" name="type" value="espresso" onclick="hideMilkTab(true)" required>
+                <label for="espresso">espresso</label><br>
+
+                <input type="radio" id="americano" class="bigRadio" name="type" value="americano" onclick="hideMilkTab(true)" required>
+                <label for="americano">americano</label><br>
+            </fieldset>
+        </form>
+
+        <form id=sizeForm>
+            <fieldset id=drinkSize>
+              <legend>Size</legend>
+                <h2><mark>Choose A Size</mark></h2>
+                <label for="size">Select A Size:</label>
+                <select id="size">
+                    <option value="small">small</option>
+                    <option value="medium" selected>medium</option>
+                    <option value="large">large</option>
+                </select>
+            </fieldset>
+        </form>
+
+        <form id=milkForm>
+            <fieldset id=milkType>
+              <legend>Milk</legend>
+                <h2><mark>Choose Your Milk</mark></h2>
+                <input type="radio" id="none" class="bigRadio" name="milk" value="none">
+                <label for="none">none</label><br>
+                
+                <input type="radio" id="whole" class="bigRadio" name="milk" value="whole">
+                <label for="whole">whole</label><br>
+
+                <input type="radio" id="skimmed" class="bigRadio" name="milk" value="skimmed">
+                <label for="skimmed">skimmed</label><br>
+
+                <input type="radio" id="semi-skimmed" class="bigRadio" name="milk" value="semi-skimmed"  checked>
+                <label for="semi-skimmed">semi-skimmed</label><br>
+
+                <input type="radio" id="coconut" class="bigRadio" name="milk" value="coconut">
+                <label for="coconut">coconut</label><br>
+
+                <input type="radio" id="soya" class="bigRadio" name="milk" value="soya">
+                <label for="soya">soya</label><br>
+            </fieldset>
+        </form>
+
+        <form id=extraForm>
+            <fieldset>
+              <legend>Extra</legend>
+                <h2><mark>Extras</mark></h2>
+                <input type="checkbox" id="cream" class="bigRadio" value=1>
+                <label for="cream">Cream</label><br>
+
+                <input type="range" id="sugar" min="0" max="20" value="0" onchange="updateSliderText(this.value, 'displaySugarText')">
+                <label for="sugar">Sugars</label><br>
+                <input type="text" id="displaySugarText" value="0">
+                <label for="displaySugarText">Amount</label><br><br>
+
+                <input type="range" id="syrup" min="0" max="20"  value="0" onchange="updateSliderText(this.value, 'displaySyrupText')">
+                <label for="syrup">Syrup</label><br>
+                <input type="text" id="displaySyrupText" value="0">
+                <label for="displaySyrupText">Amount</label><br>
+            </fieldset> 
+        </form>
+        
+        <p id=costText>Current Cost: £0.00</p>
+        <button type="button" id="addDrink">Add Drink To Order</button>
+        <p id=orderText></p>
+        <button type="button" id="placeOrder">Place Order</button>
+        
+        <script src="script.js"></script>
+        <script>
+          //check whether browser support service workers
+          if ('serviceWorker' in navigator) {
+              //wait until page loaded to avoid delaying rendering
+              window.addEventListener('load', function() {
+                  //register service worker
+                  navigator.serviceWorker.register('serviceworker.js').then(
+                      function(registration) {
+                          console.log('Service worker registration successful', 
+                                      registration);
+                      }, 
+                      function(err) {
+                          console.log('Service worker registration failed', err);
+                  });
+              });
+          }
+        </script>
+    </main>
+
+    <footer>
+      <p>Matt Bradley</p>
+      <a href="mailto:b014272j@student.staffs.ac.uk">Send An Email</a><br>
+      <a href="tel:07777777777">Make A Call</a>
+    </footer>
+  </body>
+  
+</html>
+

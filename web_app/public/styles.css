@@ -1,0 +1,293 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts//Roboto-Regular.woff2') format('woff2'), 
+				url('fonts/Roboto-Regular.woff') format('woff'),
+				url('fonts/Roboto-Regular.ttf') format('truetype'),
+				url('fonts/Roboto-Regular.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
+
+/* Main Mobile Styles */
+:root {
+  font-size: 12px;
+  font-family: 'Roboto';
+  --text-primary: #ffffff;
+  --background-primary: #1A1A1D;
+  --background-secondary: #4E4E50;
+  --section-one: #6F2232;
+  --section-two: #950740;
+  --section-three: #C3073F;
+  }
+
+h1 {
+  font-size:3rem;
+  text-align:center;
+  margin:0.5rem;
+  padding-right: 1rem;
+}
+  
+h2 {
+  font-size:2rem;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+a {
+  color: inherit;
+}
+
+header, footer {
+  background:var(--section-three);
+  padding:0.5rem;
+  color:var(--text-primary);
+  text-align:center;
+  line-height:2.5rem;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--background-primary);
+  margin: 0;
+  padding: 0;
+} 
+  
+  main {
+    margin-left: 1rem;
+    padding: 2rem;
+  }
+
+mark {
+    color: var(--text-primary);
+    background-color:var(--section-three);
+    padding: 0.7rem;
+}
+
+h2 mark {
+  background-color: var(--section-two);
+  padding: 0.5rem;
+}
+
+ol {
+  margin-left: 2rem;
+}
+
+article {
+  border: 0.5rem solid var(--section-three)
+}
+
+#home {
+  display: grid;
+}
+
+
+/* Nav Styles */
+
+.mainNav{
+  position:sticky;
+  top:0;  
+}
+
+.mainNav ul {
+  list-style-type:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  background-color: var(--background-secondary);
+  flex-flow: row wrap;
+}
+
+.mainNav li {
+  flex-grow:1;   
+  padding:0.6rem 0;
+  width:calc(25% - 2rem);
+  border:1px var(--bg-secondary) solid;
+  text-align: center;
+  text-decoration: none;
+}
+
+.mainNav li a {
+    color: var(--bg-secondary);
+}
+
+.mainNav a:visited {
+  color:var(--text-primary)
+}
+
+.mainNav li:nth-of-type(1):hover{
+    background-color: var(--section-two);
+    font-size: 30px;   
+    -webkit-transition: background-color 500ms linear, font-size 500ms linear;
+    -ms-transition: background-color 500ms linear, font-size 500ms linear;
+    transition: background-color 500ms linear, font-size 500ms linear;
+    }
+
+.mainNav li:nth-of-type(2):hover{
+    background-color: var(--section-two);
+    font-size: 30px;   
+    -webkit-transition: background-color 500ms linear, font-size 500ms linear;
+    -ms-transition: background-color 500ms linear, font-size 500ms linear;
+    transition: background-color 500ms linear, font-size 500ms linear;
+    }
+
+.mainNav li:nth-of-type(3):hover{
+    background-color: var(--section-two);
+    font-size: 30px;   
+    -webkit-transition: background-color 500ms linear, font-size 500ms linear;
+    -ms-transition: background-color 500ms linear, font-size 500ms linear;
+    transition: background-color 500ms linear, font-size 500ms linear;
+    }
+
+
+
+
+
+/* Image Styles */
+
+.SectionImg {
+  float: left;
+  padding:2rem;
+  width:80%;
+  min-width: 200px;
+  max-width: 500px;
+}
+
+.screenshot {
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mainBanner {
+  width:50%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Box Styles */
+
+.info {
+  padding: 1rem;
+}
+.css {
+  width: 100%;
+}
+
+.js {
+  width: 100%;
+}
+
+.design {
+  text-align: center;
+}
+
+/* Table Styles */
+
+#qualTable {
+  border-collapse: collapse;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+#qualTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--section-three);
+  color: var(--text-primary);
+}
+
+#qualTable td {
+  background-color: var(--section-one);
+}
+
+#qualTable, th, td {
+  border: 2px solid var(--text-primary);
+}
+
+/* Form Styles */
+
+.bigRadio{
+  width: 24px;
+  height: 24px;
+}
+
+#extraForm {
+  line-height: 2rem;
+}
+
+/* Desktop Scroll Bar */
+
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+  
+  body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--section-one);
+}
+
+
+
+.aniBar{
+  height: 1rem;
+  width: 100%;
+  background-color: var(--section-two);
+  animation-name: bar;
+  animation-duration:1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  margin:auto;
+}
+
+@keyframes bar {
+  0%{
+    width:0%;
+    background-color: var(--section-one);
+  }
+
+  100% {
+    width:100%;
+    background-color: var(--section-two);
+  }
+
+}
+
+/* Desktop Media Queries */
+
+@media screen and (min-width:390px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width:600px) {
+  :root {
+    font-size: 20px;
+  }
+  
+  .info article {
+    width:45%;
+  }
+
+  .css {
+    float:left;
+  }
+
+  .js {
+    float:right;
+  }
+
+}

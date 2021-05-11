@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <title>Design 1</title>
+      <link rel="stylesheet" href="design1.css">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+      <meta name="description" content="Page For Design 1">
+      <meta name="theme-color" content="#950740">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+  </head>
+  <body>
+    <header>
+      <h1>Software Development + Machine Learning</h1>
+    </header>
+    <nav class="mainNav">
+      <ul>
+        <li>
+            <a href="index.html">
+                <span class="navText">Home</span>
+                <img src="images/home.svg" class=navImg alt="home icon">
+                
+            </a>
+        </li>
+        <li>
+            <a href="skills.html">
+                <span class="navText">Skills</span>
+                <img src="images/skills.svg" class=navImg alt = "skills icon">
+                
+            </a>
+        </li>
+        <li>
+            <a href="qualifications.html">
+                <span class="navText">Qualifications</span>
+                <img src="images/qualification.svg" class=navImg alt="qualifications icon">
+
+            </a>
+        </li>
+      </ul>
+    </nav>
+    <main id=design1>
+        <div class="boxOne box">
+          <h2>What is software Development?</h2>
+            <a href="https://appdevelopermagazine.com/scripts/resize/?path=/images/news_images/Thoughts-on-Andreessens-Essay-App-Developer-Magazine_gd5kd6gn.jpg&width=700">
+            <img src="images/softwareImg.jfif" class=image alt="coding laptop display">
+            </a>
+            <p>Software development is a set of activities within computer science which dictates the process of creating, designing and deploying software of many different forms within the industry. This comes in three general catagories:</p>
+            <ol>
+              <li>System Software - for core function of a computer, such as operating systems and utilities.</li>
+              <li>Application Software - to help users complete tasks, such as office suites and media players</li>
+              <li>Programming Software - for tools like text editors, compilers and debuggers</li>
+            </ol>
+            <p>This process is generally divided up into larger teams, each playing a key role from the begging design phases to hands on coding and deploying.</p>
+          </div>
+        <div class="boxTwo box">
+          <h2>Styles of software Development</h2>
+          <p>There are many different methods and styles that can be used to go through the software development process. Here are some:</p>
+          <ul>
+            <li>Agile Unified Process (AUP) Following the principles:
+              <ol>
+                <li>Your staff know what they're doing</li>
+                <li>Simplicity</li>
+                <li>Agility</li>
+                <li>Focus on high-value activities</li>
+                <li>Tool independence</li>
+                <li>You'll want to tailor the AUP to meet your own needs</li>
+              </ol>
+            </li>
+            <li>Extreme Programming (XP) bases its development on reducing costs of changing software by using multiple, shorter design processes as changes are a natural element of software development</li>
+            <li>Scrum is based on breaking up work for smaller teams into timed workloads called sprints - generally 2 weeks - with tracking and replanning in 15 minute daily meetings</li>
+          </ul>
+        </div>
+        <div class="boxThree box">
+          <a href="https://miro.medium.com/max/2400/1*c_fiB-YgbnMl6nntYGBMHQ.jpeg">
+          <img src="images/machineLearningImage.jpeg" class=mainImg alt="machine learning robot">
+          </a>
+        </div>
+        <div class="boxFour box">
+          <h2>What is machine learning?</h2>
+          <a href="https://i1.wp.com/www.techconsumerguide.com/wp-content/uploads/2019/02/artificial-intelligence-machine-learning-deep-learning.jpg?fit=664%2C543&ssl=1">
+          <img src="images/aiImage.jpg" class="image right" alt="ai types">
+          </a>
+          <p>Machine learning is the use of statistics to find patterns in very large data sets. This can come in many forms of data found on the internet, such as images, clicks and numbers but also self generated data, such as in reinforced learning.</p>
+          <p>Machine learning powers many reccomendation based services seen, such as Youtube, Facebook, Alexa and so on. All of these services collect data as you use them to generate a 'user profile' of data that can use machine learning algorithms to predict trends, likes, dislikes and the like. This can be utilised to do things such as reccomending new videos or music to targeted advertisements based on internet traffic. While most of these can be fairly basic it has become so integrated as to be expected seeing it on the most popular services used today.</p>
+        </div>
+        <div class="boxFive box">
+          <h2>Types of machine learning</h2>
+          <p>Machine learning generally comes in three different types based on the processing of data and how patterns are formed.</p>
+          <h3>Supervised learning</h3>
+          <p>Supervised Learning is telling the algorithm what pattern to look for in data such as in popular streaming services like Netflix and Youtube - the pattern will be to find similar videos based on the currently watched one. This can be descibed as such that each input of training data also includes a paired desired outcome</p>
+          <h3>Unsupervised Learning</h3>
+          <p>Unsupervised Learning is removing the second input seen in supervised learning and instead trying to create a pattern without being told what to look for. This is mainly achieved via principle componant and cluster analysis and is particularly useful in cyber security.</p>
+          <h3>Reinforcement Learning</h3>
+          <p>Reinforcement learning is a form of learning based on trial and error. On each run the current algorithm adapts based on what it did well and what it did badly based on scores. This can be cycled using things like genetic algorithms to cull the weakest of the dataset and form a new generation based on the strongest with some random variations on neural nodes.</p>
+        </div>
+        <script>
+          //check whether browser support service workers
+          if ('serviceWorker' in navigator) {
+              //wait until page loaded to avoid delaying rendering
+              window.addEventListener('load', function() {
+                  //register service worker
+                  navigator.serviceWorker.register('serviceworker.js').then(
+                      function(registration) {
+                          console.log('Service worker registration successful', 
+                                      registration);
+                      }, 
+                      function(err) {
+                          console.log('Service worker registration failed', err);
+                  });
+              });
+          }
+        </script>
+    </main>
+
+
+    <footer>
+      <p>Matt Bradley</p>
+      <a href="mailto:b014272j@student.staffs.ac.uk">Send An Email</a><br>
+      <a href="tel:07777777777">Make A Call</a><br>
+      <a href="https://www.flaticon.com/authors/freepik">Home Icon</a><br>
+      <a href="https://www.flaticon.com/authors/eucalyp">Skills Icon</a><br>
+      <a href="https://www.flaticon.com/authors/turkkub">Qualifications Icon</a><br>
+    </footer>
+  </body>
+</html>
+
